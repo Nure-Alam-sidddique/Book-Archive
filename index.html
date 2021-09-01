@@ -15,13 +15,13 @@
   </head>
   <body class="bg-secondary bg-opacity-10">
     <div class="container">
-      <h1 class="text-center text-success pt-5">Search Your Favourite Book</h1>
+      <h1 class="text-center text-success pt-4">Search Your Favourite Book</h1>
       <!-- Search section Start -->
       <section id="section-container" class="py-3">
         <form action="" method="" class="w-50 mx-auto">
           <div class="input-group mb-3">
             <input
-              id="input-field"
+              id="search-field"
               type="text"
               class="form-control"
               placeholder="Search Book"
@@ -38,12 +38,15 @@
           </div>
         </form>
         <div id="error-message">
-          <p>No result found</p>
+          <h3 class="text-center text-danger">No result found</h3>
         </div>
+        <div id="search-result"></div>
       </section>
       <!-- Search Section End -->
       <!-- Book Display Seciton  Start-->
-      <section id="book-container"></section>
+      <section id="book-container">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="book-card"></div>
+      </section>
       <!-- Book Display Section End -->
     </div>
     <script

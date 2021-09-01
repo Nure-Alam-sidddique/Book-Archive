@@ -1,3 +1,11 @@
 #error-message {
   display: none;
 }
+#image-resize {
+  width: 352px;
+  height: 280px;
+  padding: 6px;
+}
+#search-result {
+  display: none;
+}
