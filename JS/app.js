@@ -18,6 +18,8 @@ searchBtn.addEventListener('click', event => {
     const searchText = searchField.value;
     if (searchText === "") {
         errorMessage('block');
+        bookCard.textContent = '';
+        searchDisplaNone('none');
     }
     else {
         errorMessage('none');
@@ -52,7 +54,9 @@ const bookDisplay = bookObj => {
                     author ? author : "No found Author"
                   )}
                 </p>
-                <p>Publisher Name: ${book.publisher[0]?book.publisher[0]:"No publisher "}</p>
+                <p>Publisher Name: ${
+                  book.publisher[0] ? book.publisher[0] : "No publisher "
+                }</p>
                 <p>Publish Year: ${
                   book.first_publish_year
                     ? book.first_publish_year
