@@ -28,9 +28,9 @@
 #result {
   color: tomato;
 }
-#book-id {
+.common-color {
   color: #0d1b36;
 }
-#search-color {
-  color: #0d1b36;
+#search-btn:hover {
+  background-color: #0d1b36;
 }

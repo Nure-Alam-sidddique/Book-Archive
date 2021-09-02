@@ -10,7 +10,7 @@ const searchDisplaNone = style => {
 }
 const searchResult = (result) => {
     const resultStyle = document.querySelector("#search-result");
-  resultStyle.innerHTML=`<h3 id="search-color">Total Search Result : <span id="result">${result}</span></h3>`;
+  resultStyle.innerHTML=`<h3 class="common-color">Total Search Result : <span id="result">${result}</span></h3>`;
 }
 const toggleSpinner = style => {
   document.querySelector('#spinner-loading').style.display = style;
@@ -52,7 +52,7 @@ const bookDisplay = bookObj => {
           book.name
         }" id ="image-resize"/>
               <div class="card-body ">
-                <p class="card-title fs-4 fw-bold text-center" id="book-id">${book.title}</p>
+                <p class="card-title fs-4 fw-bold text-center common-color">${book.title}</p>
                 <p class="fw-normal" >
                   Author : ${book.author_name.map((author) =>
                     author ? author : "No found Author"
