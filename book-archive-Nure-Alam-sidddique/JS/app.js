@@ -10,7 +10,7 @@ const searchDisplaNone = style => {
 }
 const searchResult = (result) => {
     const resultStyle = document.querySelector("#search-result");
-  resultStyle.innerHTML=`<h3 class="text-success">Total Search Result : <span class="text-danger ">${result}</span></h3>`;
+  resultStyle.innerHTML=`<h3 id="search-color">Total Search Result : <span id="result">${result}</span></h3>`;
 }
 const toggleSpinner = style => {
   document.querySelector('#spinner-loading').style.display = style;
@@ -51,17 +51,17 @@ const bookDisplay = bookObj => {
               }-M.jpg" class="card-img-top " alt="${
           book.name
         }" id ="image-resize"/>
-              <div class="card-body">
-                <h5 class="card-title">${book.title}</h5>
-                <p >
-                  Author Name: ${book.author_name.map((author) =>
+              <div class="card-body ">
+                <p class="card-title fs-4 fw-bold text-center" id="book-id">${book.title}</p>
+                <p class="fw-normal" >
+                  Author : ${book.author_name.map((author) =>
                     author ? author : "No found Author"
                   )}
                 </p>
-                <p>Publisher Name: ${
+                <p class="fw-normal">Publisher : ${
                   book.publisher[0] ? book.publisher[0] : "No publisher "
                 }</p>
-                <p>Publish Year: ${
+                <p class= "fw-normal" >First Publish Year : ${
                   book.first_publish_year
                     ? book.first_publish_year
                     : "No publish year"
