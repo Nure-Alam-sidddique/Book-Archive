@@ -1,11 +1,26 @@
 #error-message {
   display: none;
 }
+.col {
+  width: 280px;
+}
+#card {
+  width: 270px;
+}
 #image-resize {
-  width: 352px;
-  height: 280px;
+  width: 100%;
+  height: 200px;
   padding: 6px;
 }
 #search-result {
   display: none;
+}
+#spinner-loading {
+  display: none;
+  width: 80px;
+  height: 80px;
+}
+.spinner-center {
+  display: flex;
+  margin: 0 auto;
 }

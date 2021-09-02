@@ -37,15 +37,25 @@
             </button>
           </div>
         </form>
+        <!-- Loading Spinnner -->
+        <div
+          id="spinner-loading"
+          class="spinner-border text-success spinner-center"
+          role="status"
+        >
+          <span class="visually-hidden mx-auto">Loading...</span>
+        </div>
+        <!-- Error Message -->
         <div id="error-message">
           <h3 class="text-center text-danger">No result found</h3>
         </div>
+        <!-- Search Result Show -->
         <div id="search-result"></div>
       </section>
       <!-- Search Section End -->
       <!-- Book Display Seciton  Start-->
       <section id="book-container">
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="book-card"></div>
+        <div class="row row-cols-1 row-cols-md-4 g-2" id="book-card"></div>
       </section>
       <!-- Book Display Section End -->
     </div>
