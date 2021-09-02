@@ -52,6 +52,11 @@ const bookDisplay = bookObj => {
         const div = document.createElement('div');
       div.classList.add('col');
       //  Card Create to show display
+      // console.log(book.author_name);
+      const authorName = book.author_name
+        ? book.author_name.map((name) => name)
+        : "<span class='text-danger'>No found Author</span>";
+      // console.log(authorName);
         div.innerHTML = `
                <div class="card h-100 " id="card">
               <img src=" https://covers.openlibrary.org/b/id/${
@@ -63,12 +68,8 @@ const bookDisplay = bookObj => {
                 <p class="card-title fs-4 fw-bold text-center title-color">${
                   book.title
                 }</p>
-                <p><span class="fw-bold text-secondary ">Author :</span> ${book.author_name.map(
-                  (author) =>
-                    author
-                      ? author
-                      : "<span class='text-danger'>No found Author</span>"
-                )}
+                <p><span class="fw-bold text-secondary ">Author :</span>
+                ${authorName}
                 </p>
                 <p class="fw-normal"><span class="fw-bold text-secondary">Publisher :</span> ${
                   book.publisher[0] ? book.publisher[0] : "No publisher "
