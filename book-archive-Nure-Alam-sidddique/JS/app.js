@@ -10,7 +10,7 @@ const searchDisplaNone = style => {
 }
 const searchResult = (result) => {
     const resultStyle = document.querySelector("#search-result");
-  resultStyle.innerHTML=`<h3 class="common-color">Total Search Result : <span id="result">${result}</span></h3>`;
+  resultStyle.innerHTML=`<h3 class="text-success left-border ps-1">Total Search Result : <span id="result">${result}</span></h3>`;
 }
 const toggleSpinner = style => {
   document.querySelector('#spinner-loading').style.display = style;
@@ -52,19 +52,23 @@ const bookDisplay = bookObj => {
           book.name
         }" id ="image-resize"/>
               <div class="card-body ">
-                <p class="card-title fs-4 fw-bold text-center common-color">${book.title}</p>
-                <p class="fw-normal" >
-                  Author : ${book.author_name.map((author) =>
-                    author ? author : "No found Author"
-                  )}
+                <p class="card-title fs-4 fw-bold text-center title-color">${
+                  book.title
+                }</p>
+                <p><span class="fw-bold text-secondary ">Author :</span> ${book.author_name.map(
+                  (author) =>
+                    author
+                      ? author
+                      : "<span class='text-danger'>No found Author</span>"
+                )}
                 </p>
-                <p class="fw-normal">Publisher : ${
+                <p class="fw-normal"><span class="fw-bold text-secondary">Publisher :</span> ${
                   book.publisher[0] ? book.publisher[0] : "No publisher "
                 }</p>
-                <p class= "fw-normal" >First Publish Year : ${
+                <p class= "fw-normal" ><span class="fw-bold text-secondary ">First Publish Year : </span> ${
                   book.first_publish_year
                     ? book.first_publish_year
-                    : "No publish year"
+                    : "<span class='text-danger'>No publish year</span>"
                 }</p>
               </div>
             </div>
